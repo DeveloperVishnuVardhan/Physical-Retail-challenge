@@ -1,0 +1,35 @@
+Video Temporal and Spatial Temporal Action Recognition Challenge
+
+Dataset released under CC-BY-NC 4.0 license (https://physicalstoreworkshop.github.io/docs/LICENSE.pdf)
+
+- Challenge goal:
+TAL and STAL challenges aims at localizing the actions of interest in the video frames. For TAL, the output of the model is the temporal segments of the actions of interest.
+For STAL, the output of the model is the bounding boxes localizing the actions of the interest. In this task, we focus on the products and actions
+that associate with potential shopping behaviors, i.e. products that is taken into the basket, and products that is taken out of the basket.
+To evaluate model's performance, frame-mAP and tube-mAP will be used.
+
+
+- Dataset size:
+Participants will be provided with 73,683 images and annotation pairs for download as training set.
+
+
+- Data format:
+Annotation: annotation of each frame is inside 'anns' folder. Each file corresponds to each frame in the 'frames' folder. Each line of the annotation file is a
+bounding box with unique ID and action label, e.g.
+'b89d3411-356b-4344-b530-8c4e87f39e9c, 0, 0.0, 0.09259259259259259, 0.7161458333333334, 0.1898318', is 'unique ID, action class, x0, y0, x1, y1'
+The action labels are: '0': take into shopping basket, '1': take out of shopping basket, '2': rummage 
+
+- Submission:
+Once completed, please submit all the files to run your proposed model as a zip file, or a downloadlink to weijianl@amazon.com. 
+
+Please provide a Python inference code and instructions to setup the environment. We will run your inference code on a holdout test set.
+For example, python inference.py ${path_to_video_frames_folder} --output_dir ${path to a dir for saving algorithm output}.
+
+
+Input: a sequence of frames of a video
+
+Output: 
+TAL: a txt file for each video, where inside the txt file, each line contains a prediction of 'start_frame, end_frame, action_class'
+STAL: a txt file for each frame, where inside the txt file, each line contains a prediction of 'x0, y0, x1, y1, action_class'. 'x0, y0, x1, y1'
+corresponds to the bounding box of the action of interest.
+

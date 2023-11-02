@@ -1,0 +1,25 @@
+Appearance Based Verification Challenge
+
+Dataset released under CC-BY-NC 4.0 license (https://physicalstoreworkshop.github.io/docs/LICENSE.pdf)
+
+- Challenge goal:
+ABV challenge aims at validating if the model is able to match the query product image to the corresponding image in gallery. Participants will be given a training dataset consisting of images for different products and are expected to design methods for accurate matching product identities. During testing, held out query images will be used to probe the proposed model. The model is expected to output a ranking list of items based on the matching the model predicts. To evaluate model's performance, Cumulative Matching Characteristics (CMC) curves will be used.
+
+
+- Dataset size:
+Participants will be provided with 74,200 images as training set.
+
+- Data format:
+Each image file name contains the barcode of the corresponding product which is considered as the ID for matching. The file name follows the format: 'barcode_instance.jpg', where 'barcode' is the actual unqiue barcode number of the product, 'instance' represent the instance number of the product.
+
+- Submission:
+Once completed, please submit all the files to run your proposed model as a zip file, or a downloadlink to weijianl@amazon.com. 
+
+Please provide a Python inference code and instructions to setup the environment. We will run your inference code on a holdout test set. For example, python inference.py ${path to image} --output_dir ${path to a dir for saving algorithm output} on each image in our holdout dataset.
+
+Input: the model should take in an image as query,
+
+Output: the output of the model should follow the following format:
+For each image (for example */*/image1.jpg), we expect a txt file is saved in the output_dir with name image1.txt. For each text file, we expect a N dimensional vector can be loaded using numpy.loadtxt(${text file}). This vector will be used to compare similarity between images. By default, we compare normalized cosine distance between two vectors. If your method uses other similarity. Please submit it as a function, i.e. some_similarity(vector1, vector2) and let us know how to import it in README file.
+
+
