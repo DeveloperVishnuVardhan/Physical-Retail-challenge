@@ -33,12 +33,16 @@ Plan for literature review:
 2. Research for SOTA papers for TAL.
 3. Research for SOTA papers for STAL.
 
+****
+
 **Understanding Video analytics in general by reading some basic papers**
 1. Zelnik-Manor and Irani, "Event-Based Analysis of Video", CVPR 2001.
 2. Zhong, Shi, and Visontai, "Detecting Ununsual Activity in Video
 3. Yuen and Torralba, "A data-driven approach for event prediction", ECCV 2010.
 4. karpathy, toderici, Shetty, Leung, Sukthankar, and Fei-Fei, "Large-scale Video Classification with Convolutional Neural Networks", CVPR 2014.
 5. Simonyan and Zisserman, "Two-Stream Convolutional Networks for Action Recognition in Videos", NeuroIPS 2014.
+
+****
 
 **Learnings From Event-Based Analysis of video of paper**
 <br>
@@ -54,6 +58,8 @@ This paper shows a unsupervised approach to detect Unsual activites in a video, 
 <br>
 The paper focuses on adopting CNNS for video classifications which discusses different approaches of adopting the Temporal dimension of videos into CNNS for effective classification using Video data(Frames).
 
+****
+
 **Temporal Action Localization**
 <br>
 **Definition:** Temporal Action localization is the process of determining when a particular
@@ -62,15 +68,21 @@ predict the start and end times(or frames) of this action.
 
 **Research for SOTA papers for TAL and STAL**
 1. Zheng Shou, Dongang Wang, and Shih-Fu Chang, "Temporal Action Localization in Untrimmed Videos via Multi-stage CNNs" (2016).
-2. Yue Zhao1,Yuanjun Xiong1,Limin Wang2,Zhirong Wu1,Xiaoou Tang1 and Dahua Lin1, "Temporal Action Detection with Structured Segment Networks" (2017).
-3. Ashraful Islam and Richard J. Radke, "Weakly Supervised Temporal Action Localization Using Deep Metric Learning" (2020).
+2. Xiaolong Liu, Qimeng Wang, Yao Hu, Xu Tang, Shiwei Zhang, Song Bai, and Xiang Bai, "End-to-end Temporal Action Detection with Transformer" (2021).
+3. Chen-Lin Zhang, Jianxin Wu and Yin Li, "ActionFormer: Localizing Moments of Actions with Transformers" (2022).
 4. Tuan N. Tang, Kwonyoung Kim and Kwanghoon Sohn, "TemporalMaxer: Maximize Temporal Context with only Max Pooling for Temporal Action Localization" (2023).
-5. Chen-Lin Zhang, Jianxin Wu and Yin Li, "ActionFormer: Localizing Moments of Actions with Transformers" (2022).
-6. Limin Wang,Bingkun Huang1,Zhiyu Zhao1,Zhan Tong1 Yinan He2 Yi Wang2 Yali Wang3,2 Yu Qiao2, "VideoMAE V2: Scaling Video Masked Autoencoders with Dual Masking" (2023).
-7. Dingfeng Shi, Yujie Zhong, Qiong Cao, Lin Ma, Jia Li, Dacheng Tao, "TriDet: Temporal Action Detection with Relative Boundary Modeling" (2023).
-8. InternVideo: General Video Foundation Models via Generative and Discriminative Learning (2023).
+5. Limin Wang,Bingkun Huang1,Zhiyu Zhao1,Zhan Tong1 Yinan He2 Yi Wang2 Yali Wang3,2 Yu Qiao2, "VideoMAE V2: Scaling Video Masked Autoencoders with Dual Masking" (2023).
+7. InternVideo: General Video Foundation Models via Generative and Discriminative Learning (2023).
 
+**Learnings From Temporal Action Localization in Untrimmed Videos via multi-stage CNNS.**
+<br>
+The paper Discusses about usind 3D CNNS to effectively capture the motion or temporal aspect present in videos, it works in 3 stages first a proposal network identifies the potential actions and then a classification is used using this information and identifies the actions present in video and then finally the localization network outputs the temporal boundaries (start, end frames of each action).
 
+**Learnings from Weakly Supervised Temporal Action Localization Using Deep Metric Learning paper**
+<br>
+
+****
+****
 **Key Concepts in TAL:**
 <br>
 1. Action Proposals: These are potential segments in the video where an action might occur. often, the
